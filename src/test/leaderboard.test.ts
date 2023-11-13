@@ -3,18 +3,18 @@ import {Player} from "../interfaces/player";
 
 describe("leaderboard", () => {
     it("has a players", () => {
-        const players : Player[] = [{name: "Alex", score: 1000, position: undefined},{name: "Blas",score: 900, position: undefined}]
+        const players : Player[] = [{name: "Alex", score: 1000},{name: "Blas",score: 900}]
         expect(leaderboard(players)).toHaveLength(2)
         expect(leaderboard(players)).toContainEqual({name: "Alex", score: 1000, position: 1});
         expect(leaderboard(players)).toContainEqual({name: "Blas", score: 900, position: 2});
     })
     it("has a players sort by score", () => {
-        const players: Player[] = [{name: "Blas", score: 900, position: undefined},{name: "Alex",score: 1000, position: undefined}]
+        const players: Player[] = [{name: "Blas", score: 900},{name: "Alex",score: 1000}]
         const expectedLeaderboard: Player[] = [{name: "Alex",score: 1000, position: 1},{name: "Blas", score: 900, position: 2}];
         expect(leaderboard(players)).toEqual(expectedLeaderboard)
     })
     it("has a players with position", () => {
-        const players: Player[] = [{name: "Alex",score: 1000, position: undefined},{name: "Blas", score: 900, position: undefined}]
+        const players: Player[] = [{name: "Alex",score: 1000},{name: "Blas", score: 900}]
         const expectedLeaderboard: Player[] = [{name: "Alex",score: 1000, position: 1},{name: "Blas", score: 900, position: 2}];
         expect(leaderboard(players)).toEqual(expectedLeaderboard)
     })
@@ -30,10 +30,10 @@ describe("leaderboard", () => {
     })
     it("check a complex case", () => {
         const players : Player[] = [
-            {name: "Blas",score: 900, position: undefined},
-            {name: "Alex", score: 1000, position: undefined},
-            {name: "Ana", score: 900, position: undefined},
-            {name: "Julia", score: 500, position: undefined}
+            {name: "Blas",score: 900},
+            {name: "Alex", score: 1000},
+            {name: "Ana", score: 900},
+            {name: "Julia", score: 500}
         ]
         const expectedLeaderboard: Player[] = [
             {name: "Alex",score: 1000, position: 1},
