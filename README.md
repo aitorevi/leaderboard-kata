@@ -5,10 +5,10 @@
 **Entrada**:
 ```
 [
-{name: 'Alex', score: 900, position: undefined},
-{name: 'Ana', score: 1000, position: undefined}, 
-{name: 'Luisa', score: 200, position: undefined}, 
-{name: 'Luisa', score: 500, position: undefined}
+{name: 'Alex', score: 900},
+{name: 'Ana', score: 1000}, 
+{name: 'Luisa', score: 200}, 
+{name: 'Luisa', score: 500}
 ]
 ```
 **Resultado**:
